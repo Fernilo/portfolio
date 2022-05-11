@@ -282,6 +282,160 @@ section {
   grid-gap: 2rem;
 }
 
+.about-container .right-about .about-item {
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container .right-about .about-item:hover {
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  -webkit-box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+          box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+
+.about-container .right-about .about-item .abt-text {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-container .right-about .about-item .abt-text .large-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.about-container .right-about .about-item .abt-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+
+.about-container .right-about .about-item .abt-text .small-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-grey-5);
+}
+
+.about-container .left-about {
+  padding-right: 5rem;
+}
+
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+
+.about-container .left-about h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.about-stats {
+  padding-bottom: 4rem;
+}
+
+.about-stats .progress-bars {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.about-stats .progress-bars .progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-stats .progress-bars .progress-bar .prog-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+  color: var(--color-grey-2);
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress {
+  width: 100%;
+  height: .45rem;
+  background-color: var(--color-grey-4);
+  margin-left: 1rem;
+  position: relative;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-secondary);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+  width: 90%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .css {
+  width: 40%;
+}
+
+.stat-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+}
+
+.stat-title::before {
+  content: '';
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-5);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .btn-con {
   display: -webkit-box;
   display: -ms-flexbox;
