@@ -38,7 +38,7 @@
 
 body{
     background-color: var(--color-primary);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
     color: var(--color-white);
     transition: all .4s ease-in-out;
@@ -52,7 +52,7 @@ a{
 }
 
 header{
-    height: 100vh;
+    min-height: 100vh;
     color: var(--color-white);
     overflow: hidden;
 }

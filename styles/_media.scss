@@ -2,9 +2,6 @@
     header{
         padding: 0;
     }
-    header .right-header{
-        padding: 2rem !important;
-    }
 
     .theme-btn{
         width: 50px;
@@ -24,16 +21,66 @@
 
     .right-header{
         grid-row: 1;
+        padding-right: 0rem !important;
         width: 90%;
         margin: auto;
         .name{
             font-size: 2.5rem !important;
+            text-align: center;
+            padding-top: 3rem;
         }
     }
 
     .header-content .left-header .image{
         margin: 0 auto;
         width: 90%;
+    }
+
+    .about-container{
+        grid-template-columns: 1fr;
+        .right-about{
+            grid-template-columns: 1fr;
+            padding-top: 2.5rem;
+        }
+        .left-about{
+            padding-right: 0;
+            p{
+                padding-left: 0;
+            }
+        }
+    }
+
+    .timeline{
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+    }
+
+    .about-stats{
+        .progress-bars{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .section{
+        padding: 1rem 2rem;
+    }
+
+    .portfolios{
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+    }
+
+    .blogs{
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+    }
+
+    .contact-content-con{
+        flex-direction: column;
+        .right-contact{
+            margin-left:0;
+            margin-top: 2.5rem;
+        }
     }
 
     .controlls{
