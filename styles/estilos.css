@@ -23,8 +23,8 @@
 }
 
 .light-mode {
-  --color-primary: #FFFCF9;
-  --color-secondary: #FF6978;
+  --color-primary: #FFFFFF;
+  --color-secondary: #27AE60;
   --color-white: #3D405B;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -987,5 +987,58 @@ section {
           transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0;
+  }
+  header .right-header {
+    padding: 2rem !important;
+  }
+  .theme-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .header-content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 6rem;
+  }
+  .left-header .h-shape {
+    display: none;
+  }
+  .right-header {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    width: 90%;
+    margin: auto;
+  }
+  .right-header .name {
+    font-size: 2.5rem !important;
+  }
+  .header-content .left-header .image {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .controlls {
+    top: auto;
+    bottom: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-grey-5);
+  }
+  .controlls .control {
+    margin: 1rem .3rem;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */

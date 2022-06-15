@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -22,8 +23,8 @@
 }
 
 .light-mode{
-    --color-primary: #FFFCF9;
-    --color-secondary: #FF6978;
+    --color-primary: #FFFFFF;
+    --color-secondary: #27AE60;
     --color-white: #3D405B;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -702,3 +703,4 @@ section{
         }
     }
 }
+@import './media';
