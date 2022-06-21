@@ -991,7 +991,7 @@ section {
 
 @media screen and (max-width: 600px) {
   header {
-    padding: 0;
+    padding: 0 !important;
   }
   .theme-btn {
     width: 50px;
@@ -1022,12 +1022,12 @@ section {
     width: 90%;
   }
   .about-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
   .about-container .right-about {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
     padding-top: 2.5rem;
   }
   .about-container .left-about {
@@ -1037,25 +1037,25 @@ section {
     padding-left: 0;
   }
   .timeline {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
   .about-stats .progress-bars {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
   .section {
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem !important;
   }
   .portfolios {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
   .blogs {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
   .contact-content-con {
