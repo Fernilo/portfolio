@@ -463,7 +463,7 @@ section {
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 50%;
+  width: 60%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
@@ -480,6 +480,14 @@ section {
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .laravel {
   width: 40%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .sql {
+  width: 70%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .bootstrap {
+  width: 50%;
 }
 
 .stat-title {
