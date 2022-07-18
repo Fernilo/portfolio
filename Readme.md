@@ -1,7 +1,7 @@
 # Portfolio
-## _Poerfolio personal_
+## _Portfolio personal_
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](/img/portfolio1.png)](https://fernilo.github.io/portfolio/)
 
 Portfolio web que cuenta un poco sobre mi , mi experiencia , mis proyectos y blogs de interés .
 
