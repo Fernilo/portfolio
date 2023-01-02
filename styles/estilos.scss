@@ -640,6 +640,16 @@ section{
                 resize: none;
             }
         }
+        .boton-enviar{
+            text-align: center;
+            color:var(--color-white);
+            background-color: var(--color-secondary);
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: inherit;
+        }
         .i-c-2{
             display: flex;
             :last-child{
