@@ -649,6 +649,9 @@ section{
             padding: 10px;
             border-radius: 5px;
             font-weight: inherit;
+            &:hover{
+                cursor:pointer;
+            }
         }
         .i-c-2{
             display: flex;

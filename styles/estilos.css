@@ -657,6 +657,9 @@ section {
   border-radius: 5px;
   font-weight: inherit;
 }
+.contact-content-con .right-contact .boton-enviar:hover {
+  cursor: pointer;
+}
 .contact-content-con .right-contact .i-c-2 {
   display: flex;
 }
