@@ -98,16 +98,7 @@ section {
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
-}
-@-webkit-keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-  }
+  animation: scaleAnim 1s ease-in-out;
 }
 @keyframes scaleAnim {
   0% {
@@ -363,6 +354,12 @@ section {
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .bootstrap {
   width: 50%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .typescript {
+  width: 20%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .net {
+  width: 20%;
 }
 
 .stat-title {
