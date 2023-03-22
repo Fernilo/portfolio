@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="main-content">
+    <main>
+        <section class="" id="portfolio">
+            <div class="main-title">
+                <h2><span>Manejo del stash en GIT</span></h2>
+            </div>
+            <p class="portfolio-text">
+                Para guardar cambios en el stash podemos utilizar: <br> <br>
+                <code>git stash</code>
+            </p>
+            <p class="portfolio-text">
+                Para volver a aplicar los cambios del stash usamos: <br> <br>
+                <code>git stash pop</code>
+            </p>
+            <p class="portfolio-text">
+                Otra opción para aplicar los cambios del stash es con: <br> <br>
+                <code>git stash apply</code> <br> <br>
+                La diferencia es que deja una copia en el stash. Util para aplicar los cambios del stash en varias ramas
+            </p>
+            <p class="portfolio-text">
+                Podemos ver los cambios de un stash con: <br> <br>
+                <code>git stash show</code>
+            </p>
+            <p class="portfolio-text">
+                Para ver el listado de los stash almacenados: <br> <br>
+                <code>git stash list</code>
+            </p>
+            <p class="portfolio-text">
+                Puede ocurrir que al aplicar el stash se generen conflictos. Para evitar esto podemos sacar ramas a partir del stash: <br> <br>
+                <code>git stash branch</code>
+            </p>
+            <p class="portfolio-text">
+                Para eliminar un stash: <br> <br>
+                <code>git stash drop</code>
+            </p>
+            <p class="portfolio-text">
+                Para eliminar todos los stash: <br> <br>
+                <code>git stash clear</code>
+            </p>
+        </section>
+    </main>
+
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>
