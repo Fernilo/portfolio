@@ -29,17 +29,21 @@
                 <code>git stash</code>
             </p>
             <p class="portfolio-text">
+                Pueden ser guardados con un título personalizado: <br> <br>
+                <code>git stash save "título personalizado"</code>
+            </p>
+            <p class="portfolio-text">
                 Para volver a aplicar los cambios del stash usamos: <br> <br>
-                <code>git stash pop</code>
+                <code>git stash pop stash@{0}</code>
             </p>
             <p class="portfolio-text">
                 Otra opción para aplicar los cambios del stash es con: <br> <br>
-                <code>git stash apply</code> <br> <br>
+                <code>git stash apply stash@{0}</code> <br> <br>
                 La diferencia es que deja una copia en el stash. Util para aplicar los cambios del stash en varias ramas
             </p>
             <p class="portfolio-text">
-                Podemos ver los cambios de un stash con: <br> <br>
-                <code>git stash show</code>
+                Podemos ver el resumen de los cambios de un stash con: <br> <br>
+                <code>git stash show -p stash@{0}</code>
             </p>
             <p class="portfolio-text">
                 Para ver el listado de los stash almacenados: <br> <br>
@@ -47,16 +51,18 @@
             </p>
             <p class="portfolio-text">
                 Puede ocurrir que al aplicar el stash se generen conflictos. Para evitar esto podemos sacar ramas a partir del stash: <br> <br>
-                <code>git stash branch</code>
+                <code>git stash branch "rama" stash@{0}</code>
             </p>
             <p class="portfolio-text">
                 Para eliminar un stash: <br> <br>
-                <code>git stash drop</code>
+                <code>git stash drop stash@{0}</code>
             </p>
             <p class="portfolio-text">
                 Para eliminar todos los stash: <br> <br>
                 <code>git stash clear</code>
             </p>
+
+            <a href="../index.html">Volver</a>
         </section>
     </main>
 
