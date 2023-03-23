@@ -22,10 +22,19 @@
     <main>
         <section class="" id="portfolio">
             <div class="main-title">
-                <h2><span>Laravel Mail</span></h2>
+                <h2><span>Envio mail en laravel con formulario de contacto</span></h2>
             </div>
             <p class="portfolio-text">
-                Algunos proyectos desarrollados en diferentes tecnologías
+                Primero configurar el archivo mail.php dentro de config y definir si nos conectamos mediante smtp o apis y modificar
+                el archivo .env según corresponda .Ademas debemos indicarle las credenciales correspondientes (host , port ,etc)
+
+                Luego crear un maileable con php artisan make:mail ContactoMailable
+
+                crear el controlador de contacto con los metodos index y send con php artinsan make:controller ContactoController
+                crear las rutas para el envio del mail , por ejemplo:
+                Route::get('contacto' , [ContactoController::class,'index'])->middleware(['auth'])->name('contacto.index');
+                Route::post('contacto' , [ContactoController::class,'send'])->middleware(['auth'])->name('contacto.send');
+
             </p>
         </section>
     </main>
