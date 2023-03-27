@@ -35,6 +35,18 @@
                 Route::get('contacto' , [ContactoController::class,'index'])->middleware(['auth'])->name('contacto.index');
                 Route::post('contacto' , [ContactoController::class,'send'])->middleware(['auth'])->name('contacto.send');
 
+                En este caso el servidor utilizado para el envio de mails es mailtrap
+
+                el controlador envia al constructor del maileable los datos de la request
+
+                public function send(Request $request) 
+                {
+                    $correo = new ContactoMailable($request->all());
+                    Mail::to('fernan.alemercado@gmail.com')->send($correo);
+                
+                    return "Mensaje Enviado";
+                }
+
             </p>
         </section>
     </main>
