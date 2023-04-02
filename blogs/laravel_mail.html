@@ -22,32 +22,46 @@
     <main>
         <section class="" id="portfolio">
             <div class="main-title">
-                <h2><span>Envio mail en laravel con formulario de contacto</span></h2>
+                <h2><span>Envio mails con formulario de contacto en laravel</span></h2>
             </div>
             <p class="portfolio-text">
                 Primero configurar el archivo mail.php dentro de config y definir si nos conectamos mediante smtp o apis y modificar
-                el archivo .env según corresponda .Ademas debemos indicarle las credenciales correspondientes (host , port ,etc)
-
-                Luego crear un maileable con php artisan make:mail ContactoMailable
-
-                crear el controlador de contacto con los metodos index y send con php artinsan make:controller ContactoController
-                crear las rutas para el envio del mail , por ejemplo:
-                Route::get('contacto' , [ContactoController::class,'index'])->middleware(['auth'])->name('contacto.index');
-                Route::post('contacto' , [ContactoController::class,'send'])->middleware(['auth'])->name('contacto.send');
+                el archivo .env según corresponda .Ademas debemos indicarle las credenciales correspondientes (host , port ,etc).
 
                 En este caso el servidor utilizado para el envio de mails es mailtrap
-
-                el controlador envia al constructor del maileable los datos de la request
-
-                public function send(Request $request) 
-                {
-                    $correo = new ContactoMailable($request->all());
-                    Mail::to('fernan.alemercado@gmail.com')->send($correo);
-                
-                    return "Mensaje Enviado";
-                }
-
             </p>
+            <p class="portfolio-text">
+                Luego crear un Maileable con <code>php artisan make:mail ContactoMailable</code> almacenada en code app/Mail
+            </p>
+
+            <p class="portfolio-text">
+                Crear el controlador de contacto con los metodos index y send con <code>php artinsan make:controller ContactoControllers</code>br
+                Junto con el controlador creamos la vista index del formulario
+            </p>
+
+            <p class="portfolio-text">
+                Crear las rutas para el envio del mail , por ejemplo: <br>
+            </p>
+            <pre>
+                <code>
+                    Route::get('contacto' , [ContactoController::class,'index'])->name('contacto.index');
+                    Route::post('contacto' , [ContactoController::class,'send'])->name('contacto.send');
+                </code>
+            </pre>
+            <p class="portfolio-text">
+                El controlador se encarga de enviar al constructor del Maileable los datos de la request
+            </p>
+            <pre>
+                <code>
+                    public function send(Request $request) 
+                    {
+                        $correo = new ContactoMailable($request->all());
+                        Mail::to('fernan.alemercado@gmail.com')->send($correo);
+                    
+                        return "Mensaje Enviado";
+                    }
+                </code>
+            </pre>
         </section>
     </main>
 

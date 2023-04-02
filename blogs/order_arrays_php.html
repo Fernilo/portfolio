@@ -22,64 +22,59 @@
     <main>
         <section class="" id="portfolio">
             <div class="main-title">
-                <h2><span>Manejo del stash en GIT</span></h2>
+                <h2><span>Ordenar Arrays en php</span></h2>
             </div>
             <p class="portfolio-text">
-                Para guardar cambios en el stash podemos utilizar: <br> <br>
+                asort() ordena el array en orden ascendente, es decir, de menor a mayor ordenándolo por su valor. Vamos a ver los parámetros: 
+                También existe la función opuesta, se llama arsort() y tiene la misma sintaxis, esta función ordena los arrays de forma descendente, de mayor a menor por el valor de los elementos.<br> <br>
+                <code>
+                    $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+                    asort($fruits);
+                    foreach ($fruits as $key => $val) {
+                        echo "$key = $val\n";
+                    }
+                </code>
+                resultado
+                <code>
+                    c = apple
+b = banana
+d = lemon
+a = orange
+                </code>
             </p>
-            <pre>
-                <code>git stash</code>
-            </pre>
             <p class="portfolio-text">
                 Pueden ser guardados con un título personalizado: <br> <br>
-            </p>
-            <pre>
                 <code>git stash save "título personalizado"</code>
-            </pre>
+            </p>
             <p class="portfolio-text">
                 Para volver a aplicar los cambios del stash usamos: <br> <br>
-            </p>
-            <pre>
                 <code>git stash pop stash@{0}</code>
-            </pre>
+            </p>
             <p class="portfolio-text">
                 Otra opción para aplicar los cambios del stash es con: <br> <br>
-              
+                <code>git stash apply stash@{0}</code> <br> <br>
                 La diferencia es que deja una copia en el stash. Util para aplicar los cambios del stash en varias ramas
             </p>
-            <pre>
-                <code>git stash apply stash@{0}</code> <br> <br>
-            </pre>
             <p class="portfolio-text">
                 Podemos ver el resumen de los cambios de un stash con: <br> <br>
-            </p>
-            <pre>
                 <code>git stash show -p stash@{0}</code>
-            </pre>
+            </p>
             <p class="portfolio-text">
                 Para ver el listado de los stash almacenados: <br> <br>
-            </p>
-            <pre>
                 <code>git stash list</code>
-            </pre>
+            </p>
             <p class="portfolio-text">
                 Puede ocurrir que al aplicar el stash se generen conflictos. Para evitar esto podemos sacar ramas a partir del stash: <br> <br>
-            </p>
-            <pre>
                 <code>git stash branch "rama" stash@{0}</code>
-            </pre>
+            </p>
             <p class="portfolio-text">
                 Para eliminar un stash: <br> <br>
-            </p>
-            <pre>
                 <code>git stash drop stash@{0}</code>
-            </pre>
+            </p>
             <p class="portfolio-text">
                 Para eliminar todos los stash: <br> <br>
-            </p>
-            <pre>
                 <code>git stash clear</code>
-            </pre>
+            </p>
 
             <div class="arrows">
                 <h3><a href="../index.html"><i class="fas fa-chevron-left"></i> Volver</a></h3>

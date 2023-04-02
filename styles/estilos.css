@@ -65,6 +65,14 @@ section {
   padding: 3rem 18rem;
 }
 
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  color:var(--color-black);
+  padding: 20px;
+}
+
 .section {
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
@@ -756,6 +764,9 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
+  }
+  section {
+    padding: 15px 0px !important;
   }
   .theme-btn {
     width: 50px;
