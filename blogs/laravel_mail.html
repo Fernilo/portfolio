@@ -35,7 +35,7 @@
             </p>
 
             <p class="portfolio-text">
-                Crear el controlador de contacto con los metodos index y send con <code>php artinsan make:controller ContactoControllers</code>br
+                Crear el controlador de contacto con los metodos index y send con <code>php artinsan make:controller ContactoControllers</code> <br>
                 Junto con el controlador creamos la vista index del formulario
             </p>
 
@@ -44,24 +44,29 @@
             </p>
             <pre>
                 <code>
-                    Route::get('contacto' , [ContactoController::class,'index'])->name('contacto.index');
-                    Route::post('contacto' , [ContactoController::class,'send'])->name('contacto.send');
+Route::get('contacto' , [ContactoController::class,'index'])->name('contacto.index');
+Route::post('contacto' , [ContactoController::class,'send'])->name('contacto.send');
                 </code>
             </pre>
             <p class="portfolio-text">
-                El controlador se encarga de enviar al constructor del Maileable los datos de la request
+                El controlador genera una instancia del Maileable con los argumentos del formulario que luego simplemente es enviado al correo indicado.
             </p>
             <pre>
                 <code>
-                    public function send(Request $request) 
-                    {
-                        $correo = new ContactoMailable($request->all());
-                        Mail::to('fernan.alemercado@gmail.com')->send($correo);
-                    
-                        return "Mensaje Enviado";
-                    }
+public function send(Request $request) 
+{
+    $correo = new ContactoMailable($request->all());
+    Mail::to('fernan.alemercado@gmail.com')->send($correo);
+
+    return "Mensaje Enviado";
+}
                 </code>
             </pre>
+
+            <div class="arrows">
+                <h3><a href="../index.html"><i class="fas fa-chevron-left"></i> Volver</a></h3>
+                <h3><a href="laravel_mail.html">Siguiente blog</a> <i class="fas fa-chevron-right"></i></h3>
+            </div>
         </section>
     </main>
 
