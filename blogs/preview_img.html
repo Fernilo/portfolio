@@ -64,6 +64,11 @@
                     </script>
                 </code>
             </pre>
+            <p>
+                "target" se refiere al elemento en el que se originó el evento. Por ejemplo, si se hace clic en un botón, el "target" será el propio botón. Si se hace clic en un enlace dentro del botón, el "target" será el enlace, no el botón.
+
+"currentTarget", por otro lado, se refiere al elemento en el que se ha agregado el controlador de eventos. En otras palabras, es el elemento que se especifica en la llamada al método addEventListener(). Si se hace clic en un enlace dentro de un botón que tiene un controlador de eventos, el "currentTarget" será el botón, ya que es el elemento en el que se agregó el controlador de eventos.
+            </p>
 
             <div class="arrows">
                 <h3><a href="../index.html"><i class="fas fa-chevron-left"></i> Volver</a></h3>
