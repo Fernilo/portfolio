@@ -22,50 +22,51 @@
     <main>
         <section class="" id="portfolio">
             <div class="main-title">
-                <h2><span>Envio mails con formulario de contacto en laravel</span></h2>
+                <h2><span>Previsualizar imagenes al subirlas con JS</span></h2>
             </div>
             <p class="portfolio-text">
-                Primero configurar el archivo mail.php dentro de config y definir si nos conectamos mediante smtp o apis y modificar
-                el archivo .env según corresponda .Ademas debemos indicarle las credenciales correspondientes (host , port ,etc).
-
-                En este caso el servidor utilizado para el envio de mails es mailtrap
-            </p>
-            <p class="portfolio-text">
-                Luego crear un Maileable con <code>php artisan make:mail ContactoMailable</code> almacenada en code app/Mail
-            </p>
-
-            <p class="portfolio-text">
-                Crear el controlador de contacto con los metodos index y send con <code>php artinsan make:controller ContactoControllers</code> <br>
-                Junto con el controlador creamos la vista index del formulario
-            </p>
-
-            <p class="portfolio-text">
-                Crear las rutas para el envio del mail , por ejemplo: <br>
+                Primero crear el input file con algún id <br> <br>
             </p>
             <pre>
                 <code>
-Route::get('contacto' , [ContactoController::class,'index'])->name('contacto.index');
-Route::post('contacto' , [ContactoController::class,'send'])->name('contacto.send');
+                    <div class="row mb-3">
+                        <div class="col">
+                            <img id="imagen-post" class="img-fluid" src="https://cdn.pixabay.com/photo/2023/01/30/18/56/island-7756423__340.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input name="imagen" type="file" class="form-control" id="imagen-file">
+                            </div>
+                        </div>
+                    </div>
                 </code>
             </pre>
             <p class="portfolio-text">
-                El controlador genera una instancia del Maileable con los argumentos del formulario que luego simplemente es enviado al correo indicado.
+                Luego en el scrip <br> <br>
             </p>
             <pre>
                 <code>
-public function send(Request $request) 
-{
-    $correo = new ContactoMailable($request->all());
-    Mail::to('fernan.alemercado@gmail.com')->send($correo);
-
-    return "Mensaje Enviado";
-}
+                    <script>
+                        const fileSelector = document.getElementById("imagen-file")
+                        fileSelector.addEventListener('change' , cambiarImagen)
+                    
+                        function cambiarImagen(event) {
+                        
+                            var file = event.currentTarget.files[0];
+                    
+                            var reader = new FileReader();
+                            reader.onload = (event) => {
+                                document.getElementById("imagen-post").setAttribute('src' , event.target.result);
+                            }
+                    
+                            reader.readAsDataURL(file);
+                        }
+                    </script>
                 </code>
             </pre>
 
             <div class="arrows">
                 <h3><a href="../index.html"><i class="fas fa-chevron-left"></i> Volver</a></h3>
-                <h3><a href="preview_img.html">Siguiente blog</a> <i class="fas fa-chevron-right"></i></h3>
             </div>
         </section>
     </main>
