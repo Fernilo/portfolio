@@ -65,15 +65,6 @@ section {
   padding: 3rem 18rem;
 }
 
-pre code {
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  color:var(--color-black);
-  padding: 20px;
-  font-size: 16px;
-}
-
 .section {
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
@@ -163,6 +154,12 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
+}
+.controlls .flag {
+  background-color: transparent;
+  width: 50px;
+  border-radius: 0px;
+  box-shadow: none;
 }
 
 .theme-btn {

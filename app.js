@@ -1,6 +1,6 @@
 const sections = document.querySelectorAll('.section');
 const sectionBtns = document.querySelectorAll('.controlls');
-const sectionBtn = document.querySelectorAll('.control');
+const sectionBtn = document.querySelectorAll('.control:not(.flag)');
 const allSections = document.querySelector('.main-content');
 
 function pageTransitions()
@@ -46,6 +46,8 @@ function pageTransitions()
         let element = document.body;
         element.classList.toggle('light-mode')
     })
+
+    const flagsElement = document.getElementById("flags")
 }
 
 pageTransitions();
