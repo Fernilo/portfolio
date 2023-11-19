@@ -47,7 +47,19 @@ function pageTransitions()
         element.classList.toggle('light-mode')
     })
 
-    const flagsElement = document.getElementById("flags")
+    //Selector de idioma
+    const flagsElement = document.getElementById("flags");
+    const changeLanguage = async (language) => {
+        console.log(language)
+        const requestJson = await fetch(`./languages/${language}.json`)
+        const texts = await requestJson.json();
+
+        console.log(texts);
+    }
+    flagsElement.addEventListener('click' , (e) => {
+        //e.target se refiere al elemento que disparo el evento
+        changeLanguage(e.target.parentElement.dataset.language);
+    })
 }
 
 pageTransitions();
