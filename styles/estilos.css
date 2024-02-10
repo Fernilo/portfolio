@@ -468,6 +468,7 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
+  filter: blur(1.8px);
 }
 .portfolios .portfolio-item .hover-items {
   width: 100%;
