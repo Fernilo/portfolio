@@ -363,7 +363,7 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
   width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .laravel {
-  width: 40%;
+  width: 60%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .sql {
   width: 70%;
@@ -372,7 +372,7 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
   width: 50%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .typescript {
-  width: 20%;
+  width: 30%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .net {
   width: 20%;
