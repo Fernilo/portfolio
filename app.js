@@ -49,12 +49,15 @@ function pageTransitions()
 
     //Selector de idioma
     const flagsElement = document.getElementById("flags");
+    const textsToChange = document.querySelectorAll("[data-section]")
+    
     const changeLanguage = async (language) => {
-        console.log(language)
-        const requestJson = await fetch(`./languages/${language}.json`)
+        const requestJson = await fetch(`../languages/${language}.json`)
         const texts = await requestJson.json();
 
-        console.log(texts);
+        for (const textToChange of textsToChange) {
+            console.log(textToChange);
+        }
     }
     flagsElement.addEventListener('click' , (e) => {
         //e.target se refiere al elemento que disparo el evento

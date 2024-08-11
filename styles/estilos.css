@@ -456,7 +456,11 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+.portfolio-subtitle {
+  text-align: center;
+  margin-top: 1rem;
 }
 .portfolios .portfolio-item {
   position: relative;
