@@ -7,8 +7,10 @@
 }
 
 :root {
-    --color-primary: #191d2b;
-    --color-secondary: #27AE60;
+    // --color-primary: #191d2b;
+    // --color-secondary: #27AE60;
+    --color-primary: #1A1A1A;
+    --color-secondary: #FF8C42;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -313,67 +315,47 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
     padding-bottom: 4rem;
     .progress-bars{
         display:grid;
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(6,1fr);
         grid-gap:2rem;
         .progress-bar{
             display:flex;
             flex-direction: column;
-            .prog-title{
-                text-transform: uppercase;
-                font-weight: 500;
+            img{
+                width:120px;
+                height: 115px;
+                border-radius: 5px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             }
-            .progress-con{
-                display: flex;
-                align-items: center;
-                .prog-text{
-                    color:var(--color-grey-2);
-                }
-                .progress{
-                    width:100%;
-                    height: .45rem;
-                    background-color: var(--color-grey-4);
-                    margin-left: 1rem;
-                    position:relative;
-                    span{
-                        position:absolute;
-                        top: 0;
-                        left:0;
-                        height: 100%;
-                        background-color: var(--color-secondary);
-                        transition:all .4s ease-in-out;
-                    }
-                    .html{
-                        width: 90%;
-                    }
-                    .css{
-                        width: 60%;
-                    }
-                    .js{
-                        width: 70%;
-                    }
-                    .php{
-                        width: 80%;
-                    }
-                    .cake{
-                        width: 80%;
-                    }
-                    .laravel{
-                        width: 40%;
-                    }
-                    .sql{
-                        width: 70%;
-                    }
-                    .bootstrap{
-                        width: 50%;
-                    }
-                    .typescript{
-                        width: 20%;
-                    }
-                    .net{
-                        width: 20%;
-                    }
-                }
+            img:hover {
+                transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Añade sombra más pronunciada */
             }
+            // .prog-title{
+            //     text-transform: uppercase;
+            //     font-weight: 500;
+            // }
+            // .progress-con{
+            //     display: flex;
+            //     align-items: center;
+            //     .prog-text{
+            //         color:var(--color-grey-2);
+            //     }
+            //     .progress{
+            //         width:100%;
+            //         height: .45rem;
+            //         background-color: var(--color-grey-4);
+            //         margin-left: 1rem;
+            //         position:relative;
+            //         span{
+            //             position:absolute;
+            //             top: 0;
+            //             left:0;
+            //             height: 100%;
+            //             background-color: var(--color-secondary);
+            //             transition:all .4s ease-in-out;
+            //         }
+            //     }
+            // }
         }
     }
 }
@@ -466,7 +448,7 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
             height: 300px;
             object-fit: cover;
             border-radius: 15px;
-            filter: blur(1.5px);
+            filter: blur(0.5px);
         }
         .hover-items{
             width: 100%;
